@@ -114,6 +114,9 @@ body {
   background: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+#header .on {
+  position: fixed;
+}
 #header .inner {
   width: 975px;
   height: 77px;
@@ -121,6 +124,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s;
+}
+#header.on .inner {
+  height: 52px;
 }
 #header .inner .logo a {
   color: transparent;
@@ -143,6 +150,13 @@ body {
   position: absolute;
   right: -15px;
   top: -4px;
+  transition: all 0.5s;
+}
+#header.on .inner .logo .sprite_insta_icon:after {
+  opacity: 0;
+}
+#header.on .inner .logo div:nth-child(2) {
+  opacity: 0;
 }
 #header .search_box {
   position: relative;
@@ -261,6 +275,9 @@ body {
 .contents .bottom_icons .right_icons > div {
   cursor: pointer;
 }
+.sprite_heart_icon_outline.on {
+  background: url("../imgs/background01.png") no-repeat -26px -261px;
+}
 .contents .likes {
   padding: 5px 20px;
   color: #262626;
@@ -320,6 +337,10 @@ body {
   top: 0;
 }
 
+.side_box.on {
+  position: fixed;
+  top: 80px;
+}
 .side_box .profile_thumb {
   width: 50px;
   height: 50px;
