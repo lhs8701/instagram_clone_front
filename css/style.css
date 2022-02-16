@@ -219,6 +219,7 @@ body {
   border-radius: 3px;
   margin-bottom: 60px;
   background: white;
+  position: relative;
 }
 .contents .top {
   display: flex;
@@ -251,12 +252,36 @@ body {
   font-size: 12px;
 }
 
+.contents .sprite_more_icon.on .toggle_box {
+  display: block;
+}
+.contents .toggle_box {
+  text-align: center;
+  position: absolute;
+  height: 0;
+  top: 35px;
+  right: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 3px;
+  display: none;
+}
+.contents .toggle_box > li {
+  padding: 5px 10px;
+  background: #fff;
+}
+
 .contents .img_section {
   overflow: hidden;
 }
 
 .contents .img_section img {
   width: 100%;
+}
+
+.contents .toggle_box > li input {
+  border: none;
+  background: #fff;
+  font-size: inherit;
 }
 
 .contents .bottom_icons {
@@ -290,7 +315,11 @@ body {
 }
 .contents .comment_container .comment {
   display: flex;
+  flex-direction: column;
   font-size: 14px;
+}
+.contents .comment_container .comment-detail {
+  display: flex;
 }
 .contents .comment_container .comment .nick_name {
   margin-right: 10px;
@@ -326,7 +355,7 @@ body {
   right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
-  pointer-events: none;
+  /* pointer-events: none; */
   opacity: 0.6;
 }
 
